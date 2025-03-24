@@ -37,7 +37,7 @@ public class SignUpController implements Initializable{
 		
 		if(user.isEmpty() || email.isEmpty() || password.isEmpty()) {
 		}else {
-		DButil.registerUser(event, user,email, password);
+		DButil.registerUser(event, email,user, password);
 		}
 	}
 	
