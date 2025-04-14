@@ -22,29 +22,6 @@ public class DButil {
 	private static final String user = "myworkbenchuser";
 	private static final String dbPassword = "password";
 	
-	
-	public void changeSceneOld(String file, Stage stage) {
-		try {
-			URL resource = getClass().getResource(file);
-			
-			if(resource == null) {
-				System.out.println("The file " + file + " doesn't exist or cant be accessed.");
-				return;
-			}
-			
-			FXMLLoader loader = new FXMLLoader(resource);
-			
-			Parent root = loader.load();
-			
-			Scene scene = new Scene(root);
-			
-			stage.setScene(scene);
-		} catch (IOException e) {
-			// TODO Auto-generated catch block
-			e.printStackTrace();
-		}
-	}
-	
 	public static void changescene(ActionEvent event, String file, String title) {
 		Parent root = null;
 		
