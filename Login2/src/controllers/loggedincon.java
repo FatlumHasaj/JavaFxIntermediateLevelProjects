@@ -12,8 +12,14 @@ public class loggedincon implements Initializable{
 	@FXML
 	private Button logout;
 	
-	public void logout1(ActionEvent event) {
-		DButil.changescene(event, "/view/login.fxml", "Login");
+	@FXML
+	public void logout(ActionEvent event) {
+		try {
+			DBUtil.changeScene(event, "/view/login.fxml", "Login", null);
+		} catch (Exception e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
 	}
 	
 	@Override
